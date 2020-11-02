@@ -49,29 +49,42 @@ STEP 6:
 import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Counter() {
+  const [count, setCount] = useState(0);
   /* STEP 1 */
 
   const increment = () => {
+    setCount(count + 1);
     /* STEP 4 */
   };
   const decrement = () => {
+    setCount(count -1);
     /* STEP 5 */
   };
   const reset = () => {
+    setCount(0);
     /* STEP 6 */
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: count % 2 == 0 ? 'royalblue' : 'crimson',  /* STEP 2 */
   };
+  // STEP 2:
+  // The 'style' object has the 'color' property hard-coded to "royalblue".
+  // What the value of 'color' should be instead is a ternary expression that goes like this:
+  // If count is even, then "royalblue", else "crimson".
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+        Number {count} is {count % 2 == 0 ? 'even' : 'odd'} {/* STEP 3 */}
+        {/* STEP 3:
+  We need to replace some hard-coded info in the JSX with expressions, interpolated inside curly brackets.
+  Start by replacing the character "0" with {count}. The 'count' slice of state is the source of truth here.
+  Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}. */}
+
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
