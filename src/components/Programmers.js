@@ -35,23 +35,23 @@ export default function Programmers() {
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
     if (featuredId == 1){
-      return programmersList[1].name;
+      return programmersList[0].name;
     }
     if (featuredId == 2){
-      return programmersList[2].name;
+      return programmersList[1].name;
     }
     if (featuredId == 3){
-      return programmersList[3].name;
+      return programmersList[2].name;
     }
     if (featuredId == 4){
-      return programmersList[4].name;
+      return programmersList[3].name;
     }
     if (featuredId == 5){
-      return programmersList[5].name;
+      return programmersList[4].name;
     }
     if (featuredId == 6){
-      return programmersList[6].name;
-    }
+      return programmersList[5].name;
+    };
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
