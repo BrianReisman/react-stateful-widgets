@@ -1,4 +1,4 @@
-/*
+/*//!
 MOODS Instructions
 
 Watch this short video:

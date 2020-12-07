@@ -1,4 +1,4 @@
-/*
+/*//!
 COUNTER Instructions
 
 Watch this short video carefully, paying attention to the UI and Chrome Devtools:
